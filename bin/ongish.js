@@ -2,8 +2,10 @@
 
 const ongish = require('../');
 
-var text = 'test text';
-var newtext = '';
+var myArgs = process.argv.slice(2);
+var text =  myArgs.join(' ');
+
+// console.log('*' + text + '*');
 
 if (ongish.isOngish(text)) {
   newtext = ongish.fromOngish(text);
