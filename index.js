@@ -1,4 +1,4 @@
-'strict';
+'use strict';
 
 
 /**
@@ -13,9 +13,8 @@
  */
 
 function isOngish(text) {
-
-    if (text.match(/ong-/)) return true;
-    return false;
+  if (text && text.match(/ong-/)) return true;
+  return false;
 
 }
 
@@ -28,32 +27,32 @@ function isOngish(text) {
 
 function engToOng(text) {
 
-    var newtext = '';
+  var newtext = '';
 
-    for (i = 0; i < text.length; i++) {
-        var letter = text.charAt(i);
-        var nextletter = '';
-        if (i < text.length - 1) {
-            nextletter = text.charAt(i+1);
-        }
-
-        if (letter.match(/[a-z]/i)) {
-          if (letter.match(/[bcdfghjklmnpqrstvwxyz]/i)) {
-              letter += 'ong';
-          } else {
-              letter = letter.toUpperCase();
-          }
-
-          if (nextletter.match(/[a-z]/i)) {
-              letter += '-';
-          }
-        }
-
-        newtext += letter;
-
+  for (var i = 0; i < text.length; i++) {
+    var letter = text.charAt(i);
+    var nextletter = '';
+    if (i < text.length - 1) {
+      nextletter = text.charAt(i + 1);
     }
 
-    return newtext;
+    if (letter.match(/[a-z]/i)) {
+      if (letter.match(/[bcdfghjklmnpqrstvwxyz]/i)) {
+        letter += 'ong';
+      } else {
+        letter = letter.toUpperCase();
+      }
+
+      if (nextletter.match(/[a-z]/i)) {
+        letter += '-';
+      }
+    }
+
+    newtext += letter;
+
+  }
+
+  return newtext;
 
 }
 
@@ -65,13 +64,13 @@ function engToOng(text) {
  */
 
 function ongToEng(text) {
-    var newtext = text;
+  var newtext = text;
 
-    newtext = newtext.replace(/[AEIOU]/g,  function(vowel) { return vowel.toLowerCase(); });
-    newtext = newtext.replace(/ong/g, '');
-    newtext = newtext.replace(/-/g, '');
+  newtext = newtext.replace(/[AEIOU]/g, (vowel) => vowel.toLowerCase() );
+  newtext = newtext.replace(/ong/g, '');
+  newtext = newtext.replace(/-/g, '');
 
-    return newtext;
+  return newtext;
 
 }
 
