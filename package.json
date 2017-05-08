@@ -1,0 +1,33 @@
+{
+  "name": "ongish",
+  "version": "1.0.0",
+  "description": "Translate to Ongish",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "node spec/support/jasmine-runner.js",
+    "debug": "node debug spec/support/jasmine-runner.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntemple/ongish.git"
+  },
+  "keywords": [
+    "ongish"
+  ],
+  "author": "Nick Temple <nick@nicktemple.com> (http://nicktemple.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ntemple/ongish/issues"
+  },
+  "homepage": "https://github.com/ntemple/ongish#readme",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jasmine": "^2.6.0",
+    "jasmine-spec-reporter": "^4.1.0"
+  }
+}
