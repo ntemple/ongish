@@ -74,8 +74,11 @@ function ongToEng(text) {
 
 }
 
+exports.isOngish = isOngish;
+exports.toOngish = engToOng;
+exports.fromOngish = ongToEng;
+
 exports.is = isOngish;
 exports.to = engToOng;
 exports.from = ongToEng;
-
 
