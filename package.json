@@ -1,6 +1,6 @@
 {
   "name": "ongish",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Translate to Ongish",
   "main": "index.js",
   "scripts": {
