@@ -38,7 +38,7 @@ function engToOng(text) {
 
     if (letter.match(/[a-z]/i)) {
       if (letter.match(/[bcdfghjklmnpqrstvwxyz]/i)) {
-        letter += 'ong';
+        letter = letter.toUpperCase() + 'ong';
       } else {
         letter = letter.toUpperCase();
       }
